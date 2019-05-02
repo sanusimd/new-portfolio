@@ -1,0 +1,80 @@
+.about{
+    // background-color: $color-grey-light-1;
+    margin-top: -25rem;
+    padding-top: 30rem;
+
+    // height: 80rem;
+
+    &__info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -5rem;
+    }
+
+    &__text{
+        // border: 5px solid $color-primary;
+        height: 400px;
+        width: 400px;
+        margin-right: 5rem;
+        margin-top: 15rem;
+      
+        
+    }
+
+    &__skills{
+        // border: 5px solid $color-primary;
+        height: 400px;
+        width: 400px;
+     
+    }
+
+    &__progress--box{
+        text-align: left;
+        
+    }
+
+    &__progress--1{
+        width: 100%;
+        background-color: $color-grey-light-2;  
+    }
+
+}
+
+.skills{
+    color: #fff;
+    padding: 3px;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+
+.html{
+    width: 99%;
+    background-color: $color-secondary-dark;
+    
+    
+}
+.css{
+    width: 98%;
+    background-color: $color-primary-dark;
+    
+}
+
+.javascript{
+    width: 75%;
+    background-color: $color-tertiary-dark;
+    
+}
+
+.git{
+    width: 65%;
+    background-color: $color-secondary-light;
+    
+}
+
+.photoshop{
+    width: 60%;
+    background-color: $color-primary;
+    
+}

@@ -1,0 +1,66 @@
+.works{
+    background-color: $color-grey-light-1;
+    padding: 5rem 0;
+}
+
+.project{
+// height: 350px;
+// width: auto;
+// // background-color: orangered;
+// display: flex;
+
+
+
+    &__box{
+        display: flex;
+        text-align: left;
+        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+        &:not(:last-child){
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__details{
+        background-color: $color-white;
+        width: 30%;
+        padding: 6rem 4rem;
+    }
+
+    &__heading{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-primary-dark;
+        
+    }
+
+    &__title{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 1.5rem 0 1.5rem 0;
+    }
+
+    &__description{
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 33px;
+        color: rgba(0,0,0,.8);
+    }
+
+    &__image{
+        width: 70%;
+        background-size: cover;
+        background-repeat: no-repeat;  
+    }
+    &__picture--1{
+        background-image: url(/img/remita.1def9909.jpg);
+    }
+
+    &__picture--2{
+        background-image: url(/img/web-project.png);
+    }
+
+    &__picture--3{
+        background-image: url(/img/Coming-Soon-1.png);
+    }
+}

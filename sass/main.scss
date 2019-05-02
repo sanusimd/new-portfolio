@@ -2,14 +2,26 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
-
+//base
 @import "base/base";
 @import "base/typography";
 @import "base/animations";
 @import "base/utilities";
 
+//Layout
+@import "layout/container";
+@import "layout/header";
+@import "layout/about";
+@import "layout/works";
+@import "layout/contact";
+@import "layout/footer";
+
+//components
+@import "components/button";
 
 
+
+//pages
 @import "pages/home";
 
 
