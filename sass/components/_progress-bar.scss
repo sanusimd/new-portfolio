@@ -1,0 +1,32 @@
+.progress-bar {
+  color: #fff;
+  padding: 3px;
+  text-align: right;
+  margin-bottom: 2rem;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+  animation: moveRight 6s;
+}
+.html-progress {
+  width: 99%;
+  background-color: $color-secondary-dark;
+}
+.css-progress {
+  width: 98%;
+  background-color: $color-primary-dark;
+}
+
+.javascript-progress {
+  width: 75%;
+  background-color: $color-tertiary-dark;
+}
+
+.git-progress {
+  width: 65%;
+  background-color: $color-secondary-light;
+}
+
+.photoshop-progress {
+  width: 60%;
+  background-color: $color-primary;
+}

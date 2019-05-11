@@ -3,6 +3,7 @@
     background-image: linear-gradient(to right bottom,
      rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
      height: 95vh;
+    //  height: 100%;
      -webkit-clip-path: polygon(50% 0, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
         clip-path: polygon(50% 0, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
         
@@ -10,12 +11,16 @@
 
     &__nav{
         font-size: 1.5rem;
-        padding-top: 5rem;
+        padding-top: 3rem;
         color:$color-white;
         font-weight: 400;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond(tab-land) {
+            padding: 1rem 10rem 0 10rem;
+        }
     }
 
     // &__logo--box{
@@ -54,7 +59,7 @@
 
     &__item:hover{
         border: 1px solid $color-white;
-        transition: all .4s;
+        // transition: all .4s;
         
     }
 

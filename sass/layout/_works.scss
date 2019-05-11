@@ -4,12 +4,6 @@
 }
 
 .project{
-// height: 350px;
-// width: auto;
-// // background-color: orangered;
-// display: flex;
-
-
 
     &__box{
         display: flex;
@@ -18,12 +12,23 @@
         &:not(:last-child){
             margin-bottom: 5rem;
         }
+
+        // responsive phone and Tablet device
+        @include respond(tab-land) {
+            flex-direction: column;
+            max-width: 70%;
+            margin: 0 auto;
+         }
     }
 
     &__details{
         background-color: $color-white;
-        width: 30%;
-        padding: 6rem 4rem;
+        max-width: 40%;
+        padding: 8rem 4rem;
+        // responsive phone and Tablet device
+        @include respond(tab-land) {
+            max-width: 100%;
+         }
     }
 
     &__heading{
@@ -48,19 +53,10 @@
     }
 
     &__image{
-        width: 70%;
-        background-size: cover;
-        background-repeat: no-repeat;  
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;  
     }
-    &__picture--1{
-        background-image: url(/img/remita.1def9909.jpg);
-    }
-
-    &__picture--2{
-        background-image: url(/img/web-project.png);
-    }
-
-    &__picture--3{
-        background-image: url(/img/Coming-Soon-1.png);
-    }
+    
 }

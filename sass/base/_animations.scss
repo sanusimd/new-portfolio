@@ -1,8 +1,4 @@
 @keyframes moveRight {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100px);
-    }
+    from {width:0}
+    to {width:100% }
   }

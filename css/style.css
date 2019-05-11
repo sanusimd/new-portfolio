@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -8,13 +25,23 @@
 html {
   box-sizing: border-box;
   font-size: 62.25%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
 
 body {
   font-family: 'lato', sans-serif;
-  line-height: 1.7; }
+  line-height: 1.7;
+  font-weight: 400; }
 
 .heading {
   font-size: 4rem; }
@@ -51,11 +78,19 @@ body {
 
 .paragraph-1 {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2.0;
   font-weight: 400;
   text-align: left;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 75em) {
+    .paragraph-1 {
+      text-align: center;
+      margin-right: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .paragraph-1 {
+      text-align: center;
+      margin-right: 0; } }
 
 .tertairy-heading {
   display: block;
@@ -67,9 +102,9 @@ body {
 
 @keyframes moveRight {
   from {
-    transform: translateX(0); }
+    width: 0; }
   to {
-    transform: translateX(100px); } }
+    width: 100%; } }
 
 .container {
   max-width: 110rem;
@@ -84,12 +119,15 @@ body {
   clip-path: polygon(50% 0, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0); }
   .header__nav {
     font-size: 1.5rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
     color: #fff;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 75em) {
+      .header__nav {
+        padding: 1rem 10rem 0 10rem; } }
   .header__logo {
     height: 50px; }
   .header__list {
@@ -106,8 +144,7 @@ body {
     text-decoration: none;
     color: #fff; }
   .header__item:hover {
-    border: 1px solid #fff;
-    transition: all .4s; }
+    border: 1px solid #fff; }
   .header__info {
     text-align: center;
     margin-top: 10rem; }
@@ -124,45 +161,27 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: -5rem; }
+    @media only screen and (max-width: 75em) {
+      .about__info {
+        flex-direction: column; } }
   .about__text {
     height: 400px;
     width: 400px;
     margin-right: 5rem;
     margin-top: 15rem; }
+    @media only screen and (max-width: 75em) {
+      .about__text {
+        height: auto;
+        margin: 5rem 0 2rem 0; } }
   .about__skills {
     height: 400px;
     width: 400px; }
   .about__progress--box {
-    text-align: left; }
-  .about__progress--1 {
+    text-align: left;
     width: 100%;
     background-color: #eee; }
-
-.skills {
-  color: #fff;
-  padding: 3px;
-  text-align: right;
-  margin-bottom: 2rem; }
-
-.html {
-  width: 99%;
-  background-color: #ff7730; }
-
-.css {
-  width: 98%;
-  background-color: #28b485; }
-
-.javascript {
-  width: 75%;
-  background-color: #5643fa; }
-
-.git {
-  width: 65%;
-  background-color: #ffb900; }
-
-.photoshop {
-  width: 60%;
-  background-color: #55c57a; }
+  .about__progress--1 {
+    border-radius: 6px; }
 
 .works {
   background-color: #f7f7f7;
@@ -174,11 +193,19 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .project__box:not(:last-child) {
     margin-bottom: 5rem; }
+  @media only screen and (max-width: 75em) {
+    .project__box {
+      flex-direction: column;
+      max-width: 70%;
+      margin: 0 auto; } }
 
 .project__details {
   background-color: #fff;
-  width: 30%;
-  padding: 6rem 4rem; }
+  max-width: 40%;
+  padding: 8rem 4rem; }
+  @media only screen and (max-width: 75em) {
+    .project__details {
+      max-width: 100%; } }
 
 .project__heading {
   font-size: 2rem;
@@ -198,18 +225,10 @@ body {
   color: rgba(0, 0, 0, 0.8); }
 
 .project__image {
-  width: 70%;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.project__picture--1 {
-  background-image: url(/img/remita.1def9909.jpg); }
-
-.project__picture--2 {
-  background-image: url(/img/web-project.png); }
-
-.project__picture--3 {
-  background-image: url(/img/Coming-Soon-1.png); }
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto; }
 
 .contact {
   background-color: #55c57a;
@@ -297,5 +316,33 @@ body {
   .btn__contact:hover {
     background-color: #fff;
     color: #55c57a;
-    cursor: pointer;
-    padding: .8em 2.7em; }
+    cursor: pointer; }
+
+.progress-bar {
+  color: #fff;
+  padding: 3px;
+  text-align: right;
+  margin-bottom: 2rem;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+  animation: moveRight 6s; }
+
+.html-progress {
+  width: 99%;
+  background-color: #ff7730; }
+
+.css-progress {
+  width: 98%;
+  background-color: #28b485; }
+
+.javascript-progress {
+  width: 75%;
+  background-color: #5643fa; }
+
+.git-progress {
+  width: 65%;
+  background-color: #ffb900; }
+
+.photoshop-progress {
+  width: 60%;
+  background-color: #55c57a; }

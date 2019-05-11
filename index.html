@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <title>Sanusi Muhyideen - Front-End Developer and UI Designer From Lagos Nigeria </title>
 </head>
@@ -22,9 +23,9 @@
                 </div>
                 <ul class="header__list">
                     <li class="header__item"><a href="#" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="#" class="header__link">About</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Works</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Contact</a></li>
+                    <li class="header__item"><a href="#about" class="header__link">About</a></li>
+                    <li class="header__item"><a href="#works" class="header__link">Works</a></li>
+                    <li class="header__item"><a href="#contact" class="header__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,7 +46,7 @@
     <!-- Header section end  -->
     <main>
         <!-- About Section Start -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <h1 class="secondary-heading">My Experience </h1>
 
@@ -60,40 +61,40 @@
                         </p>
                     </div>
                     <div class="about__skills">
+                        <h3 class="tertairy-heading">Html</h3>
                         <div class="about__progress--box">
-                            <h3 class="tertairy-heading" >Html</h3>
-                            <div class="about__progress--1">
-                                <div class="skills html">99%</div>
+                            <div class="about__progress--1 ">
+                                <div class="html-progress progress-bar">99%</div>
                             </div>
                         </div>
 
+                        <h3 class="tertairy-heading">Css3</h3>
                         <div class="about__progress--box">
-                            <h3 class="tertairy-heading">Css3</h3>
                             <div class="about__progress--1">
-                                <div class="skills css">98%</div>
+                                <div class="css-progress progress-bar">98%</div>
                             </div>
                         </div>
 
+                        <h3 class="tertairy-heading">JavaScript</h3>
                         <div class="about__progress--box">
-                            <h3 class="tertairy-heading">JavaScript</h3>
                             <div class="about__progress--1">
-                                <div class="skills javascript">75%</div>
+                                <div class="javascript-progress progress-bar">75%</div>
                             </div>
                         </div>
 
+                        <h3 class="tertairy-heading">Git</h3>
                         <div class="about__progress--box">
-                                <h3 class="tertairy-heading">Git</h3>
-                                <div class="about__progress--1">
-                                    <div class="skills git">65%</div>
-                                </div>
+                            <div class="about__progress--1">
+                                <div class="git-progress progress-bar">65%</div>
                             </div>
+                        </div>
 
-                            <div class="about__progress--box">
-                                    <h3 class="tertairy-heading">Photoshop</h3>
-                                    <div class="about__progress--1">
-                                        <div class="skills photoshop">60%</div>
-                                    </div>
+                        <h3 class="tertairy-heading">Photoshop</h3>
+                        <div class="about__progress--box">
+                            <div class="about__progress--1">
+                                <div class="photoshop-progress progress-bar">60%</div>
                             </div>
+                        </div>
 
 
                     </div>
@@ -102,7 +103,7 @@
         </section>
         <!-- About Section End -->
         <!-- Works Section Start -->
-        <Section class="works">
+        <Section class="works" id="works">
             <div class="container">
                 <h1 class="secondary-heading">
                     Works
@@ -112,9 +113,10 @@
                     Here are few of my former clients.
                 </p>
 
-                <div class="project">
+                <!-- <div class="project"> -->
                     <!-- project box-1 -->
                     <div class="project__box">
+                    
                         <div class="project__details">
                             <h5 class="project__heading">
                                 Remita
@@ -133,10 +135,12 @@
                                 <a href="#" class=" btn--link">Code →</a>
                             </div>
                         </div>
-                        <div class="project__image project__picture--1">
-                            <!-- <img src="/img/remita.1def9909.jpg" class="project__image" alt="project-image-01"> -->
+                        <!-- image project 1 -->
+                        <div class="project__image--box project__picture--1">
+                            <img src="/img/remita.1def9909.jpg" alt="remita-photo" class="project__image">
                         </div>
                     </div>
+                  
                     <!-- project box-2 -->
                     <div class="project__box">
                         <div class="project__details">
@@ -157,10 +161,10 @@
                                 <a href="#" class=" btn--link">Code →</a>
                             </div>
                         </div>
-                        <div class="project__image project__picture--2">
-
+                        <div class="project__image ">
+                            <img src="img/remita.1def9909.jpg" alt="coming-soon-photo" class="project__image">
                         </div>
-                    </div>
+                    </div> 
                     <!-- project box-3 -->
                     <div class="project__box">
                         <div class="project__details">
@@ -181,22 +185,18 @@
                                 <a href="#" class=" btn--link">Code →</a>
                             </div>
                         </div>
-                        <div class="project__image project__picture--3">
-                            <!-- <img src="/img/remita.1def9909.jpg" class="project__image" alt="project-image-01"> -->
+                        <div class="project__image ">
+                            <img src="img/web-project.png" alt="web-photos" class="project__image">
                         </div>
                     </div>
                 </div>
-
-
-
-
 
             </div>
         </Section>
         <!-- Works Section End -->
 
         <!-- Contact Section Start -->
-        <section class="contact">
+        <section class="contact" id="contact">
 
             <div class="container">
                 <h2 class="secondary-heading--contact">
@@ -208,7 +208,6 @@
                 </p>
 
                 <a href="#" class="btn__contact">Let Talk</a>
-
             </div>
 
         </section>
