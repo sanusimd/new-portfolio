@@ -17,6 +17,9 @@ body {
         font-weight: 400;
         margin: 2rem 0;
         color: $color-white;
+
+        animation-name: moveText;
+        animation-duration: 5s;
 }
 
 .secondary-heading{

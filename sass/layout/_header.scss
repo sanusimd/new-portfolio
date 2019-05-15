@@ -25,7 +25,6 @@
   }
 
   // &__logo--box{
-
   // }
 
   &__logo {
@@ -42,10 +41,28 @@
     padding: 0 1.5rem;
     border-radius: 3px;
     text-transform: uppercase;
+    position: relative;
 
     &:not(:last-child) {
       margin-right: 1.8rem;
     }
+  }
+
+  &__item:after{
+    content: "";
+    position: absolute;
+		  width: 0%;
+		  height: 3px;
+      background: rgb(250, 249, 250);
+		  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		  margin: 15.5px 0;
+		  right: 0;
+		  top: 10px;
+		  border-radius: 100px;
+  }
+  &__item:hover::after{
+    width: 100%;
+    left: 0;
   }
 
   &__link {
@@ -54,8 +71,9 @@
   }
 
   &__item:hover {
-    border: 1px solid $color-white;
-    // transition: all .4s;
+    transition: all .4s;
+    background-color: $color-primary;
+    color: $color-white;
   }
 
   &__info {
